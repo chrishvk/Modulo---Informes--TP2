@@ -1,0 +1,11 @@
+{
+    "_id": "ObjectId",
+    "nombre_medicamento" : "String",
+    "detalle": "String",
+    "informes" : [
+        {
+            "type" : "ObjectId",
+            "ref" : "Informes"
+        }
+    ]
+}
