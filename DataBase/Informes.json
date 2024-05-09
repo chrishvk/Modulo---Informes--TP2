@@ -1,0 +1,12 @@
+{
+    "_id" : "ObjectId",
+    "fecha" : "Date",
+    "hora" : "DateTime",
+    "motivo" : "String",
+    "img_odontograma" : "Binary",
+    "notas" : ["String"],
+    "_id_dentista" : "ObjectId",
+    "_id_paciente" : "ObjectId",
+    "_id_tratamiento" : "ObjectId",
+    "_id_medicamento" : "ObjectId"
+}

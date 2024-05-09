@@ -1,0 +1,17 @@
+{
+    "_id": "ObjectId",
+    "nombre" : "String",
+    "apellido_paterno" : "String",
+    "apellido_materno" : "String",
+    "sexo" : "String",
+    "fecha_nacimiento" : "Date",
+    "celular" : "String",
+    "correo" : "String",
+    "firma" : "Binary",
+    "informes" : [
+        {
+            "type" : "ObjectId",
+            "ref" : "Informes"
+        }
+    ]
+}
