@@ -63,6 +63,7 @@
 // //   })
 // //   export class AppRoutingModule { }
 
+import { Title } from '@angular/platform-browser';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -88,6 +89,27 @@ export const routes: Routes = [
         title: 'Informes',
         loadComponent: () =>
           import('./dashboard-estudiante/pages/informes/informes.component'),
+        // children: [
+        //   {
+        //     path: 'views',
+        //     title: 'View',
+        //     loadComponent: () =>
+        //       import(
+        //         './dashboard-estudiante/pages/informes/view/view.component'
+        //       ),
+        //   },
+        //   {
+        //     path: '',
+        //     redirectTo: 'view',
+        //     pathMatch: 'full',
+        //   },
+        // ],
+      },
+      {
+        path: 'view',
+        title: 'View',
+        loadComponent: () =>
+          import('./dashboard-estudiante/pages/informes/view/view.component'),
       },
       {
         path: '',
