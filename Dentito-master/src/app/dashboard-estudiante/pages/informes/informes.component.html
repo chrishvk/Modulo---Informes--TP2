@@ -1,0 +1,106 @@
+<app-title title="Informes Post Tratamiento" />
+
+<div class="max-w-4xl mx-auto">
+  <!-- Formulario -->
+  <div class="bg-white rounded p-6 shadow-md mb-6">
+    <h2 class="text-lg font-semibold mb-4">Buscar Informes</h2>
+    <form class="flex flex-col md:flex-row md:justify-between">
+      <div class="flex flex-wrap gap-4 w-full md:w-1/2">
+        <div class="w-full">
+          <label
+            for="numero_tratamiento"
+            class="block text-gray-700 font-medium mb-2"
+            >Número de tratamiento</label
+          >
+          <input
+            type="text"
+            id="numero_tratamiento"
+            name="numero_tratamiento"
+            class="w-3/4 pl-2 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 border-2 border-gray-300"
+          />
+        </div>
+        <div class="w-full">
+          <label
+            for="nombre_dentista"
+            class="block text-gray-700 font-medium mb-2"
+            >Nombre del dentista</label
+          >
+          <input
+            type="text"
+            id="nombre_dentista"
+            name="nombre_dentista"
+            class="w-3/4 pl-2 border-2 border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+          />
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-4 w-full md:w-1/2">
+        <div class="w-full">
+          <label
+            for="nombre_paciente"
+            class="block text-gray-700 font-medium mb-2"
+            >Nombre del paciente</label
+          >
+          <input
+            type="text"
+            id="nombre_paciente"
+            name="nombre_paciente"
+            class="w-3/4 pl-2 border-2 border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+          />
+        </div>
+        <div class="w-full">
+          <label for="fecha" class="block text-gray-700 font-medium mb-2"
+            >Fecha</label
+          >
+          <input
+            type="date"
+            id="fecha"
+            name="fecha"
+            class="w-3/4 pl-2 border-2 border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+          />
+        </div>
+      </div>
+      <div class="w-full mt-6 md:w-auto">
+        <button
+          type="submit"
+          class="w-full md:w-auto bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        >
+          Buscar
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- Tabla -->
+  <div class="bg-white rounded p-6 shadow-md">
+    <h2 class="text-lg font-semibold mb-4">Consultas</h2>
+    <table class="w-full">
+      <thead>
+        <tr>
+          <th class="px-4 py-2">NUMERO</th>
+          <th class="px-4 py-2">PACIENTE</th>
+          <th class="px-4 py-2">DNI</th>
+          <th class="px-4 py-2">DENTISTA</th>
+          <th class="px-4 py-2">FECHA DE CONSULTA</th>
+          <th class="px-4 py-2">DURACION DE CONSULTA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">1</td>
+          <td class="border px-4 py-2">Juan Pérez</td>
+          <td class="border px-4 py-2">12345678A</td>
+          <td class="border px-4 py-2">Dr. Martínez</td>
+          <td class="border px-4 py-2">2024-05-08</td>
+          <td class="border px-4 py-2">1 hora</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">2</td>
+          <td class="border px-4 py-2">María Gómez</td>
+          <td class="border px-4 py-2">87654321B</td>
+          <td class="border px-4 py-2">Dra. Sánchez</td>
+          <td class="border px-4 py-2">2024-05-09</td>
+          <td class="border px-4 py-2">45 minutos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

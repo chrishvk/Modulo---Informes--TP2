@@ -4,10 +4,8 @@ import { NavbarComponent } from '../../../shared/navbar/navbar.component';
 @Component({
   selector: 'app-cita',
   standalone: true,
-  imports: [ NavbarComponent],
+  imports: [NavbarComponent],
   templateUrl: './cita.component.html',
-  styleUrl: './cita.component.css'
+  styleUrl: './cita.component.css',
 })
-export default class CitaComponent {
-
-}
+export default class CitaComponent {}

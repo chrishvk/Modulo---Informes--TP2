@@ -5,8 +5,5 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './creacion-cita.component.html',
-  styleUrl: './creacion-cita.component.css'
 })
-export class CreacionCitaComponent {
-
-}
+export class CreacionCitaComponent {}
