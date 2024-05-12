@@ -5,7 +5,7 @@ import { Component, Input, booleanAttribute } from '@angular/core';
   selector: 'app-title',
   standalone: true,
   imports: [CommonModule],
-  template: `<h1 class="text-3xl mb-5 ml-5 font-bold">
+  template: `<h1 class="block antialiased font-sans relative my-5 text-center text-4xl font-bold leading-tight tracking-normal text-black md:text-5xl">
     {{ title }}
   </h1>`,
   styles: ``,

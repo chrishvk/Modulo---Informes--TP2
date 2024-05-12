@@ -4,25 +4,30 @@
 <div class="pb-12">
   <main class="px-40">
     <div class="">
-      <h1
+      <!-- <h1
         class="block antialiased font-sans relative my-5 text-center text-4xl font-bold leading-tight tracking-normal text-black md:text-5xl"
       >
         INFORME 001
-      </h1>
-      <section class="grid grid-cols-2 gap-4 text-start font-semibold py-12">
-        <p class="">
+      </h1> -->
+      <app-title title="INFORME 001"></app-title>
+      <section class="bg-white rounded p-6 shadow-md mb-6">
+        <p class="font-semibold">
           Apellidos y nombres:
           <span class="text-gray-600 text-[14px]">Jimenez Jimenez Joan</span>
         </p>
-        <p>Fecha: <span class="text-gray-600 text-[14px]">00/00/0000</span></p>
-        <p>
+        <p class="font-semibold">
+          Fecha: <span class="text-gray-600 text-[14px]">00/00/0000</span>
+        </p>
+        <p class="font-semibold">
           Dentista:
           <span class="text-gray-600 text-[14px]"> Matias Castro</span>
         </p>
-        <p>Duración: <span class="text-gray-600 text-[14px]">90</span></p>
+        <p class="font-semibold">
+          Duración: <span class="text-gray-600 text-[14px]">90</span>
+        </p>
       </section>
 
-      <section class="py-6">
+      <section class="bg-white rounded p-6 shadow-md mb-6">
         <h2 class="font-bold text-red-700">Odontograma</h2>
         <p>Dientes superiores</p>
         <span>18, 17, 16, 15, 14 Sin anomalías visibles</span>
@@ -31,18 +36,19 @@
           >45, 46, 47, 44, 43, 42, 41, 40, 39, 38, 37, 36 Sin anomalías
           visibles</span
         >
-      </section>
 
-      <section class="py-6">
+        <br />
+        <br />
+
         <h2 class="font-bold text-red-700">Diagnóstico</h2>
         <p>
           Se observa una caries en la superficie del diente13 que requiere
           atención además se recomienda monitorear las restauraciones anteriores
           en el diente 32 para asegurar su durabilidad y funcionalidad
         </p>
-      </section>
 
-      <section class="py-6">
+        <br />
+
         <h2 class="font-bold text-red-700">Recomendaciones</h2>
         <p>
           Cita de seguimiento: Agendar una cita dentro de las próximas dos
@@ -54,9 +60,9 @@
           Revisión periódica: Es recomendable realizar chequeos dentales cada 8
           meses para prevenir futuros complicaciones
         </p>
-      </section>
 
-      <section class="py-6">
+        <br />
+
         <h2 class="font-bold text-red-700">Estimación de Costos</h2>
 
         <table class="w-full border-2 border-gray-400">
@@ -118,13 +124,13 @@
         class="middle none center mr-4 rounded-lg bg-blue-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         data-ripple-light="true"
       >
-        Button
+        Imprimir
       </button>
       <button
         class="middle none center mr-4 rounded-lg bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         data-ripple-light="true"
       >
-        Button
+        Enviar por correo
       </button>
     </div>
   </main>
