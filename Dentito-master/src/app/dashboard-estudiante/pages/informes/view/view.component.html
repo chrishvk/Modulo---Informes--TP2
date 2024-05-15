@@ -1,137 +1,141 @@
 <!-- title -->
 <!-- <app-title title="INFORME 001" /> -->
 <!-- component -->
-<div class="pb-12">
-  <main class="px-40">
-    <div class="">
-      <!-- <h1
-        class="block antialiased font-sans relative my-5 text-center text-4xl font-bold leading-tight tracking-normal text-black md:text-5xl"
-      >
-        INFORME 001
-      </h1> -->
-      <app-title title="INFORME 001"></app-title>
-      <section class="bg-white rounded p-6 shadow-md mb-6">
-        <p class="font-semibold">
-          Apellidos y nombres:
-          <span class="text-gray-600 text-[14px]">Jimenez Jimenez Joan</span>
-        </p>
-        <p class="font-semibold">
-          Fecha: <span class="text-gray-600 text-[14px]">00/00/0000</span>
-        </p>
-        <p class="font-semibold">
-          Dentista:
-          <span class="text-gray-600 text-[14px]"> Matias Castro</span>
-        </p>
-        <p class="font-semibold">
-          Duración: <span class="text-gray-600 text-[14px]">90</span>
-        </p>
-      </section>
-
-      <section class="bg-white rounded p-6 shadow-md mb-6">
-        <h2 class="font-bold text-red-700">Odontograma</h2>
-        <p>Dientes superiores</p>
-        <span>18, 17, 16, 15, 14 Sin anomalías visibles</span>
-        <p>Dientes inferiores</p>
-        <span
-          >45, 46, 47, 44, 43, 42, 41, 40, 39, 38, 37, 36 Sin anomalías
-          visibles</span
+<div class="pb-12 flex flex-col items-center">
+  <div class="pb-12" id="contentToConvert">
+    <main class="px-40">
+      <div class="">
+        <!-- <h1
+          class="block antialiased font-sans relative my-5 text-center text-4xl font-bold leading-tight tracking-normal text-black md:text-5xl"
         >
+          INFORME 001
+        </h1> -->
+        <app-title title="INFORME 001"></app-title>
+        <section class="bg-white rounded p-6 shadow-md mb-6">
+          <p class="font-semibold">
+            Apellidos y nombres:
+            <span class="text-gray-600 text-[14px]">Jimenez Jimenez Joan</span>
+          </p>
+          <p class="font-semibold">
+            Fecha: <span class="text-gray-600 text-[14px]">00/00/0000</span>
+          </p>
+          <p class="font-semibold">
+            Dentista:
+            <span class="text-gray-600 text-[14px]"> Matias Castro</span>
+          </p>
+          <p class="font-semibold">
+            Duración: <span class="text-gray-600 text-[14px]">90</span>
+          </p>
+        </section>
 
-        <br />
-        <br />
+        <section class="bg-white rounded p-6 shadow-md mb-6">
+          <h2 class="font-bold text-red-700">Odontograma</h2>
+          <p>Dientes superiores</p>
+          <span>18, 17, 16, 15, 14 Sin anomalías visibles</span>
+          <p>Dientes inferiores</p>
+          <span
+            >45, 46, 47, 44, 43, 42, 41, 40, 39, 38, 37, 36 Sin anomalías
+            visibles</span
+          >
 
-        <h2 class="font-bold text-red-700">Diagnóstico</h2>
-        <p>
-          Se observa una caries en la superficie del diente13 que requiere
-          atención además se recomienda monitorear las restauraciones anteriores
-          en el diente 32 para asegurar su durabilidad y funcionalidad
-        </p>
-
-        <br />
-
-        <h2 class="font-bold text-red-700">Recomendaciones</h2>
-        <p>
-          Cita de seguimiento: Agendar una cita dentro de las próximas dos
-          semanas para tratar la caries en el diente 13.
           <br />
-          Higiene oral: Reforzar la técnica de cepillado y usar hilo dental
-          diariamente
           <br />
-          Revisión periódica: Es recomendable realizar chequeos dentales cada 8
-          meses para prevenir futuros complicaciones
-        </p>
 
-        <br />
+          <h2 class="font-bold text-red-700">Diagnóstico</h2>
+          <p>
+            Se observa una caries en la superficie del diente13 que requiere
+            atención además se recomienda monitorear las restauraciones
+            anteriores en el diente 32 para asegurar su durabilidad y
+            funcionalidad
+          </p>
 
-        <h2 class="font-bold text-red-700">Estimación de Costos</h2>
+          <br />
 
-        <table class="w-full border-2 border-gray-400">
-          <thead>
-            <tr>
-              <th class="px-4 py-2">Descripción del tratamiento</th>
-              <th class="px-4 py-2">Código</th>
-              <th class="px-4 py-2">Cantidad</th>
-              <th class="px-4 py-2">Costo Unitario</th>
-              <th class="px-4 py-2">Costo total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="border px-4 py-2">Consulta inicial</td>
-              <td class="border px-4 py-2">C100</td>
-              <td class="border px-4 py-2">1</td>
-              <td class="border px-4 py-2">$50.00</td>
-              <td class="border px-4 py-2">$50.00</td>
-            </tr>
+          <h2 class="font-bold text-red-700">Recomendaciones</h2>
+          <p>
+            Cita de seguimiento: Agendar una cita dentro de las próximas dos
+            semanas para tratar la caries en el diente 13.
+            <br />
+            Higiene oral: Reforzar la técnica de cepillado y usar hilo dental
+            diariamente
+            <br />
+            Revisión periódica: Es recomendable realizar chequeos dentales cada
+            8 meses para prevenir futuros complicaciones
+          </p>
 
-            <tr>
-              <td class="border px-4 py-2">Consulta inicial</td>
-              <td class="border px-4 py-2">C100</td>
-              <td class="border px-4 py-2">1</td>
-              <td class="border px-4 py-2">$50.00</td>
-              <td class="border px-4 py-2">$50.00</td>
-            </tr>
+          <br />
 
-            <tr>
-              <td class="border px-4 py-2">Consulta inicial</td>
-              <td class="border px-4 py-2">C100</td>
-              <td class="border px-4 py-2">1</td>
-              <td class="border px-4 py-2">$50.00</td>
-              <td class="border px-4 py-2">$50.00</td>
-            </tr>
+          <h2 class="font-bold text-red-700 pb-4">Estimación de Costos</h2>
 
-            <tr>
-              <td class="border px-4 py-2">Consulta inicial</td>
-              <td class="border px-4 py-2">C100</td>
-              <td class="border px-4 py-2">1</td>
-              <td class="border px-4 py-2">$50.00</td>
-              <td class="border px-4 py-2">$50.00</td>
-            </tr>
+          <table class="w-full border-2 border-gray-400">
+            <thead>
+              <tr>
+                <th class="px-4 py-2">Descripción del tratamiento</th>
+                <th class="px-4 py-2">Código</th>
+                <th class="px-4 py-2">Cantidad</th>
+                <th class="px-4 py-2">Costo Unitario</th>
+                <th class="px-4 py-2">Costo total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2">Consulta inicial</td>
+                <td class="border px-4 py-2">C100</td>
+                <td class="border px-4 py-2">1</td>
+                <td class="border px-4 py-2">$50.00</td>
+                <td class="border px-4 py-2">$50.00</td>
+              </tr>
 
-            <tr>
-              <td class="border px-4 py-2">Consulta inicial</td>
-              <td class="border px-4 py-2">C100</td>
-              <td class="border px-4 py-2">1</td>
-              <td class="border px-4 py-2">$50.00</td>
-              <td class="border px-4 py-2">$50.00</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
-    <div>
-      <button
-        class="middle none center mr-4 rounded-lg bg-blue-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        data-ripple-light="true"
-      >
-        Imprimir
-      </button>
-      <button
-        class="middle none center mr-4 rounded-lg bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-        data-ripple-light="true"
-      >
-        Enviar por correo
-      </button>
-    </div>
-  </main>
+              <tr>
+                <td class="border px-4 py-2">Consulta inicial</td>
+                <td class="border px-4 py-2">C100</td>
+                <td class="border px-4 py-2">1</td>
+                <td class="border px-4 py-2">$50.00</td>
+                <td class="border px-4 py-2">$50.00</td>
+              </tr>
+
+              <tr>
+                <td class="border px-4 py-2">Consulta inicial</td>
+                <td class="border px-4 py-2">C100</td>
+                <td class="border px-4 py-2">1</td>
+                <td class="border px-4 py-2">$50.00</td>
+                <td class="border px-4 py-2">$50.00</td>
+              </tr>
+
+              <tr>
+                <td class="border px-4 py-2">Consulta inicial</td>
+                <td class="border px-4 py-2">C100</td>
+                <td class="border px-4 py-2">1</td>
+                <td class="border px-4 py-2">$50.00</td>
+                <td class="border px-4 py-2">$50.00</td>
+              </tr>
+
+              <tr>
+                <td class="border px-4 py-2">Consulta inicial</td>
+                <td class="border px-4 py-2">C100</td>
+                <td class="border px-4 py-2">1</td>
+                <td class="border px-4 py-2">$50.00</td>
+                <td class="border px-4 py-2">$50.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div>
+    <button
+      (click)="generatePDF()"
+      class="middle none center mr-4 rounded-lg bg-blue-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      data-ripple-light="true"
+    >
+      Imprimir
+    </button>
+    <button
+      class="middle none center mr-4 rounded-lg bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      data-ripple-light="true"
+    >
+      Enviar por correo
+    </button>
+  </div>
 </div>
