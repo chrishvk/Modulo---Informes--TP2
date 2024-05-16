@@ -13,12 +13,12 @@ export default class EditComponent {
   generatePDF() {
     const data = document.getElementById('contentToConvert');
     if (data) {
-      // Ajustes para html2canvas
+      
       html2canvas(data, {
-        scale: 2, // Aumenta la escala para mejorar la resolución
-        useCORS: true, // Para manejar contenido externo, si lo hay
+        scale: 2, 
+        useCORS: true,
       }).then((canvas) => {
-        const imgWidth = 210; // Ajusta este valor para cambiar el tamaño
+        const imgWidth = 210;
         const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
         const contentDataURL = canvas.toDataURL('image/png');
@@ -28,7 +28,7 @@ export default class EditComponent {
           format: 'a4',
         });
 
-        const margin = 0; // Añade márgenes si es necesario
+        const margin = 0;
         pdf.addImage(
           contentDataURL,
           'PNG',
