@@ -13,31 +13,45 @@ export default class EditComponent {
   generatePDF() {
     const data = document.getElementById('contentToConvert');
     if (data) {
-      // Ajustes para html2canvas
       html2canvas(data, {
-        scale: 2, // Aumenta la escala para mejorar la resolución
-        useCORS: true, // Para manejar contenido externo, si lo hay
+        scale: 2, // Mejora la calidad de la imagen
+        useCORS: true,
       }).then((canvas) => {
-        const imgWidth = 210; // Ajusta este valor para cambiar el tamaño
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        const pageWidth = 210; // Ancho de página A4 en mm
+        const pageHeight = 297; // Altura de página A4 en mm
+        let imgWidth = 210; // Ajusta este valor si es necesario, hasta 210 para A4
+        let imgHeight = (canvas.height * imgWidth) / canvas.width;
 
         const contentDataURL = canvas.toDataURL('image/png');
-        const pdf = new jsPDF({
-          orientation: 'p',
-          unit: 'mm',
-          format: 'a4',
-        });
+        const pdf = new jsPDF('p', 'mm', 'a4');
 
-        const margin = 0; // Añade márgenes si es necesario
+        // Calcular el margen para centrar si es necesario
+        const margin = (pageWidth - imgWidth) / 2;
+        const verticalMargin = (pageHeight - imgHeight) / 2;
+
+        // Asegurarse de que la altura de la imagen no sea mayor que la página
+        if (imgHeight > pageHeight) {
+          imgHeight = pageHeight;
+          imgWidth = (canvas.width * imgHeight) / canvas.height;
+        }
+
         pdf.addImage(
           contentDataURL,
           'PNG',
           margin,
-          margin,
-          imgWidth - 2 * margin,
+          verticalMargin > 0 ? verticalMargin : 0,
+          imgWidth,
           imgHeight
         );
-        pdf.save('informe.pdf');
+
+        // Crear un objeto Blob del PDF
+        const pdfBlob = pdf.output('blob');
+
+        // Crear una URL del Blob
+        const pdfUrl = URL.createObjectURL(pdfBlob);
+
+        // Abrir el PDF en una nueva pestaña
+        window.open(pdfUrl, '_blank');
       });
     }
   }
