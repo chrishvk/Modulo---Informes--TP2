@@ -29,4 +29,4 @@ El proyecto consiste en el desarrollo de un aplicativo web que permitirá la ges
 
 1. Clona el repositorio desde aquí o también: https://github.com/chrishvk/Modulo---Informes--TP2.git
 2. Instala las dependencias del módulo usando: `npm install`.
-3. Inicia la aplicación frontend.
+3. Iniciar la aplicación en Angular (FrontEnd) usando `npm start`.
