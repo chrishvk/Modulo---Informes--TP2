@@ -13,7 +13,7 @@ El proyecto consiste en el desarrollo de un aplicativo web que permitirá la ges
 ## Equipo de Trabajo
 
 | Miembro | Rol |
-|---------------|
+|---|---|
 | Caso Arellano Christian Junior | Scrum Master |
 | Hilario Castro Kenss Lin Kadu | Desarrollador Frontend |
 | Villayzan Garcia Keyla | Desarrollador Frontend |
