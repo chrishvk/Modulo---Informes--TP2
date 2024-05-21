@@ -116,6 +116,11 @@ export default class EditComponent {
     notesSection!.appendChild(noteParagraph);
 
     this.notesForm.reset();
+
+    const submitButton = document.getElementById('submitButton');
+    if (submitButton) {
+      submitButton.style.display = 'none';
+    }
   }
 
   showForm() {
