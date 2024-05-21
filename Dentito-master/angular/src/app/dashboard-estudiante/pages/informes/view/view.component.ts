@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { TitleComponent } from '../../../../shared/title/title.component';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   standalone: true,
-  imports: [TitleComponent],
+  imports: [TitleComponent, ReactiveFormsModule],
   templateUrl: './view.component.html',
   styles: ``,
 })
@@ -98,5 +99,27 @@ export default class EditComponent {
     )}&body=${encodeURIComponent(body)}`;
 
     window.open(emailURL, '_self');
+  }
+
+  notesForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.notesForm = this.formBuilder.group({
+      noteInput: '',
+    });
+  }
+
+  addNote() {
+    const notesSection = document.getElementById('notesSection');
+    const noteParagraph = document.createElement('p');
+    noteParagraph.textContent = this.notesForm.get('noteInput')!.value;
+    notesSection!.appendChild(noteParagraph);
+
+    this.notesForm.reset();
+  }
+
+  showForm() {
+    const notesForm = document.getElementById('notesForm');
+    notesForm!.style.display = 'block';
   }
 }

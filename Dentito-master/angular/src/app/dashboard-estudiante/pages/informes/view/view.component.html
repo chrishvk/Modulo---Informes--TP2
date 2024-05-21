@@ -120,6 +120,30 @@
             </tbody>
           </table>
         </section>
+
+        <!-- TODO -->
+
+        <div class="" id="notesSection"></div>
+
+        <div id="notesForm" style="display: none">
+          <form [formGroup]="notesForm" (ngSubmit)="addNote()">
+            <label class="font-bold text-red-700" for="noteInput">Nota:</label
+            ><br />
+            <input
+              class="peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 mt-5"
+              type="text"
+              id="noteInput"
+              formControlName="noteInput"
+            /><br />
+            <input
+              class="cursor-pointer middle none center mr-4 rounded-lg bg-orange-600 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none mt-4"
+              type="submit"
+              value="Enviar Notas"
+            />
+          </form>
+        </div>
+
+        <!-- TODO -->
       </div>
     </main>
   </div>
@@ -137,6 +161,12 @@
       data-ripple-light="true"
     >
       Enviar por correo
+    </button>
+    <button
+      (click)="showForm()"
+      class="middle none center mr-4 rounded-lg bg-orange-600 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    >
+      Agregar notas
     </button>
   </div>
 </div>
