@@ -127,4 +127,23 @@ export default class EditComponent {
     const notesForm = document.getElementById('notesForm');
     notesForm!.style.display = 'block';
   }
+
+  handleFileInput(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        const imagePreviewUrl = e.target.result;
+        // console.log('Vista previa de la imagen:', imagePreviewUrl);
+
+        // Creando img con vista previa
+        // const imgElement = document.createElement('img');
+        const imgElement = new Image();
+        imgElement.src = imagePreviewUrl;
+
+        document.getElementById('appendImage')?.appendChild(imgElement);
+      };
+      reader.readAsDataURL(file);
+    }
+  }
 }
