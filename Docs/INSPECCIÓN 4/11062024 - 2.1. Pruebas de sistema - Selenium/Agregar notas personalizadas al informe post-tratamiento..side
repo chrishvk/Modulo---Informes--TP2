@@ -1,0 +1,97 @@
+{
+  "id": "d0b8e723-d631-4d3c-9ab5-3de2c997e629",
+  "version": "2.0",
+  "name": "Agregar notas personalizadas al informe post-tratamiento.",
+  "url": "http://localhost:4200",
+  "tests": [{
+    "id": "f8897d88-465f-4d3d-b535-d898be8fc365",
+    "name": "Informe PDF",
+    "commands": [{
+      "id": "fe7276df-a578-4bc7-acba-efe6ac7c35eb",
+      "comment": "",
+      "command": "open",
+      "target": "/dashboard-estudiante/view",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61e7936b-ff33-4ffb-ae0a-d08590b96f75",
+      "comment": "",
+      "command": "click",
+      "target": "css=.middle:nth-child(3)",
+      "targets": [
+        ["css=.middle:nth-child(3)", "css:finder"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "705a72f6-e037-4f9c-a182-c5296d1b4f0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=noteInput",
+      "targets": [
+        ["id=noteInput", "id"],
+        ["css=#noteInput", "css:finder"],
+        ["xpath=//input[@id='noteInput']", "xpath:attributes"],
+        ["xpath=//div[@id='notesForm']/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "baf3c0a3-83a6-4421-b73c-87a36e1c285a",
+      "comment": "",
+      "command": "type",
+      "target": "id=noteInput",
+      "targets": [
+        ["id=noteInput", "id"],
+        ["css=#noteInput", "css:finder"],
+        ["xpath=//input[@id='noteInput']", "xpath:attributes"],
+        ["xpath=//div[@id='notesForm']/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Se recomienda no alimentos duros."
+    }, {
+      "id": "e5093396-07ae-48e5-8df5-80838b4cd811",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//input[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//div[@id='notesForm']/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6670aa1e-9e90-404f-8535-65968b128315",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-blue-500",
+      "targets": [
+        ["css=.bg-blue-500", "css:finder"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7416",
+      "windowTimeout": 2000
+    }, {
+      "id": "02bdcaa4-c067-44cd-88cb-6b3b17800902",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win7416}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c5fc10ed-da22-43b4-a20b-9d6738853824",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f8897d88-465f-4d3d-b535-d898be8fc365"]
+  }],
+  "urls": ["http://localhost:4200/"],
+  "plugins": []
+}
