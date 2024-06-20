@@ -1,0 +1,45 @@
+{
+  "id": "114183c6-8391-445a-b9e1-bb9c8b26e2a7",
+  "version": "2.0",
+  "name": "Adjuntar imágenes intraorales y extraorales al informe. ",
+  "url": "http://localhost:4200",
+  "tests": [{
+    "id": "e4cd32bb-24c1-442b-8c7a-1d06f0faaa19",
+    "name": "Imagenes",
+    "commands": [{
+      "id": "e98d3908-6e9f-40fd-888e-20d63b88de03",
+      "comment": "",
+      "command": "open",
+      "target": "/dashboard-estudiante/view",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e0e2af8-fb61-4ce7-9b15-f2b24e7e426a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7791999e-58e6-4adc-bf3c-df1ebca8542d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-purple-800",
+      "targets": [
+        ["css=.bg-purple-800", "css:finder"],
+        ["xpath=//div[2]/label", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0013fc4d-bfff-4984-ad2f-b852ab5b8846",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e4cd32bb-24c1-442b-8c7a-1d06f0faaa19"]
+  }],
+  "urls": ["http://localhost:4200/"],
+  "plugins": []
+}

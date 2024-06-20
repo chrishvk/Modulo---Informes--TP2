@@ -24,6 +24,7 @@ export default class InformesComponent implements OnInit {
       (data) => {
         this.pacientes = data;
         this.isLoading = false;
+        console.log(data)
       },
       (error) => {
         console.error('Error al obtener pacientes:', error);
