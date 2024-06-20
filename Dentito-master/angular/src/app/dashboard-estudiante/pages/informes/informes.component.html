@@ -1,4 +1,4 @@
-<app-title title="INFORMES POST TRATAMIENTO" />
+<app-title title="INFORMES POST TRATAMIENTO"></app-title>
 
 <div class="max-w-4xl mx-auto">
   <!-- Formulario -->
@@ -80,50 +80,28 @@
           <th class="px-4 py-2">DNI</th>
           <th class="px-4 py-2">DENTISTA</th>
           <th class="px-4 py-2">FECHA DE CONSULTA</th>
-          <th class="px-4 py-2">DURACION DE CONSULTA</th>
           <th class="px-4 py-2"></th>
         </tr>
       </thead>
       <tbody>
+        @for ( paciente of pacientes; track $index) {
         <tr>
-          <td class="border px-4 py-2">1</td>
-          <td class="border px-4 py-2">Juan Pérez</td>
-          <td class="border px-4 py-2">12345678A</td>
-          <td class="border px-4 py-2">Dr. Martínez</td>
-          <td class="border px-4 py-2">2024-05-08</td>
-          <td class="border px-4 py-2">1 hora</td>
+          <td class="border px-4 py-2">{{ $index + 1 }}</td>
+          <td class="border px-4 py-2">
+            {{ paciente.nombres }} {{ paciente.apellidos }}
+          </td>
+          <td class="border px-4 py-2">{{ paciente.dni }}</td>
+          <td class="border px-4 py-2">Dentista No Disponible</td>
+          <td class="border px-4 py-2">{{ paciente.fechaRegistro }}</td>
           <td class="border px-4 py-2 h-[65px] flex justify-center">
             <img
               class="w-6 h-6 cursor-pointer"
               src="../../../../assets/icons/icon-eye.png"
               (click)="onEyeClick()"
             />
-            <!-- <img
-              class="w-6 h-6 cursor-pointer"
-              src="../../../../assets/icons/icon-download.png"
-            /> -->
           </td>
         </tr>
-
-        <tr>
-          <td class="border px-4 py-2">2</td>
-          <td class="border px-4 py-2">María Gómez</td>
-          <td class="border px-4 py-2">87654321B</td>
-          <td class="border px-4 py-2">Dra. Sánchez</td>
-          <td class="border px-4 py-2">2024-05-09</td>
-          <td class="border px-4 py-2">45 minutos</td>
-          <td class="border px-4 py-2 h-[65px] flex justify-center">
-            <img
-              class="w-6 h-6 cursor-pointer"
-              src="../../../../assets/icons/icon-eye.png"
-              (click)="onEyeClick()"
-            />
-            <!-- <img
-              class="w-6 h-6 cursor-pointer"
-              src="../../../../assets/icons/icon-download.png"
-            /> -->
-          </td>
-        </tr>
+        }
       </tbody>
     </table>
   </div>
