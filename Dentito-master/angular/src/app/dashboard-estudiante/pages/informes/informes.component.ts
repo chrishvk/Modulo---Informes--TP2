@@ -33,8 +33,21 @@ export default class InformesComponent implements OnInit {
     );
   }
 
-  onEyeClick() {
-    this.router.navigate(['/dashboard-estudiante/view']);
-    console.log('Redireccionado EyeClick');
+  // onEyeClick() {
+  //   this.router.navigate(['/dashboard-estudiante/view']);
+  //   console.log('Redireccionado EyeClick');
+  // }
+
+  onEyeClick(paciente: any) {
+    this.router.navigate(['/dashboard-estudiante/view'], {
+      state: {
+        paciente: {
+          nombres: paciente.nombres,
+          apellidos: paciente.apellidos,
+          dni: paciente.dni,
+          fechaRegistro: paciente.fechaRegistro,
+        },
+      },
+    });
   }
 }
