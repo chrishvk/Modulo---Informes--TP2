@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export default class InformesService {
-  API_URL: string = 'http://localhost:3001/pacientes';
+  API_URL: string = 'https://backend-nine-amber-97.vercel.app/pacientes';
 
   constructor(private httpClient: HttpClient) {}
 
