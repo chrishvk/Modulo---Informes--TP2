@@ -10,3 +10,15 @@ services:
     volumes:
       - ./angular:/project
       - /project/node_modules
+
+  backend:
+    build:
+      context: BACKEND
+
+    ports:
+      - 3001:3001
+    volumes:
+      - ./BACKEND:/project
+      - /BACKEND/node_modules
+    environment:
+      - NODE_ENV=development

@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TitleComponent } from '../../../../shared/title/title.component';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import InformesService from '../../../../services/paciente/informes.service';
+import { InformesInterface } from '../../../../interfaces/informes.interface';
 
 @Component({
   standalone: true,
@@ -10,7 +13,27 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   templateUrl: './view.component.html',
   styles: ``,
 })
-export default class EditComponent {
+export default class ViewComponent implements OnInit {
+  paciente: any;
+  isLoading = true;
+  notesForm: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router, // Use Router instead of ActivatedRoute
+    private informesService: InformesService,
+    private route: ActivatedRoute
+  ) {
+    this.notesForm = this.formBuilder.group({
+      noteInput: '',
+    });
+  }
+
+  ngOnInit(): void {
+    console.log('State recibido:', history.state.paciente);
+    this.paciente = history.state.paciente;
+  }
+
   generatePDF() {
     const data = document.getElementById('contentToConvert');
     if (data) {
@@ -101,14 +124,6 @@ export default class EditComponent {
     window.open(emailURL, '_self');
   }
 
-  notesForm: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) {
-    this.notesForm = this.formBuilder.group({
-      noteInput: '',
-    });
-  }
-
   addNote() {
     const notesSection = document.getElementById('notesSection');
     const noteParagraph = document.createElement('p');
@@ -145,5 +160,10 @@ export default class EditComponent {
       };
       reader.readAsDataURL(file);
     }
+  }
+  onEyeClick(paciente: any) {
+    this.router.navigate(['/dashboard-estudiante/view'], {
+      state: { paciente }, // Pass paciente as state
+    });
   }
 }
